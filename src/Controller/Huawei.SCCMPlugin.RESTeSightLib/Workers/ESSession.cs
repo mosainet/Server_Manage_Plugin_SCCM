@@ -629,7 +629,10 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers
         /// </summary>
         private void InitHC()
         {
-            HClient = new HttpClient() { BaseAddress = new Uri(GetBaseURL()) };
+            HClient = new HttpClient() {
+                BaseAddress = new Uri(GetBaseURL()),
+                Timeout = TimeSpan.FromMinutes(10)
+                };
             TrustCertificate();//忽略证书问题。
         }
         /// <summary>
