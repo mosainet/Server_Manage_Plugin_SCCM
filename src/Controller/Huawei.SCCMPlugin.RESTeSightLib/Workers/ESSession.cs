@@ -631,7 +631,7 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers
         {
             HClient = new HttpClient() {
                 BaseAddress = new Uri(GetBaseURL()),
-                Timeout = TimeSpan.FromMinutes(10)
+                Timeout = TimeSpan.FromMinutes(30)
                 };
             TrustCertificate();//忽略证书问题。
         }
