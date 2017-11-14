@@ -9,7 +9,7 @@ var manager = {
 					console.log("deployTaskManage getTaskList result:");
 					console.log(result);
 
-					var ret = { code: '0', msg: '', data: { totalCount: result.size, data: result.data } }
+					var ret = { code: result.code, msg: result.description, data: { totalCount: result.size, data: result.data } }
 					dealResult(ret, cb);
 				});	
     },
