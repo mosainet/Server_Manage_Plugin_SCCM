@@ -424,10 +424,10 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers
                 catch (Exception se)
                 {
                     LogUtil.HWLogger.API.Error(se);
-                    //lastException = se;
+                    lastException = se;
                 }
             }
-            //if (lastException != null) throw lastException;
+            if (lastException != null) throw lastException;
         }
 
         /*

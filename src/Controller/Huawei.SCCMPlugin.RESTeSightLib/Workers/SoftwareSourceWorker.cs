@@ -254,11 +254,11 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers
                 catch (Exception se)
                 {
                     LogUtil.HWLogger.API.Error(se);
-                    //lastException = se;
+                    lastException = se;
                     //不抛出错误，防止前台弹出异常。
                 }
             }
-            //if (lastException != null) throw lastException;
+            if (lastException != null) throw lastException;
         }
         /// <summary>
         /// 获得同步软件源任务列表并返回列表。

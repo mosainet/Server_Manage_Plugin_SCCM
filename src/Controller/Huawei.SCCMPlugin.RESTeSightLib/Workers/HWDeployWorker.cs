@@ -397,7 +397,7 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers
         public void SyncTaskFromESight()
         {
             IList<HWESightTask> hwTaskList = HWESightTaskDal.Instance.FindCreatedTaskByType(this.ESSession.HWESightHost.ID, ConstMgr.HWESightTask.TASK_TYPE_DEPLOY);
-            //Exception lastException = null;//修改为不抛出错误。
+            Exception lastException = null;//修改为不抛出错误。
             foreach (HWESightTask hwTask in hwTaskList)
             {
                 try
@@ -407,10 +407,10 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers
                 catch (Exception se)
                 {
                     LogUtil.HWLogger.API.Error(se);
-                    //lastException = se;//修改为不抛出错误。
+                    lastException = se;//修改为不抛出错误。
                 }
             }
-            //if (lastException != null) throw lastException;//修改为不抛出错误。
+            if (lastException != null) throw lastException;//修改为不抛出错误。
         }
         /// <summary>
         /// 根据任务id,删除任务
