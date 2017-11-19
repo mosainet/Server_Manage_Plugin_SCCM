@@ -49,7 +49,7 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers.Tests
             basePackage.FileList = "iBMC.zip,iBMC.zip.asc";
             basePackage.SftpserverIP = "188.10.18.188";
             basePackage.SftpUserName = "itSftpUser";
-            basePackage.SftpPassword = "Huawei@123";
+            basePackage.SftpPassword = "123";
             string taskName = _esSession.BasePackageWorker.UploadBasePackage(basePackage);
             Console.WriteLine(taskName);
             Assert.IsTrue(!string.IsNullOrEmpty(taskName));
@@ -65,7 +65,7 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers.Tests
             basePackage.FileList = "iBMC.zip,iBMC.zip.asc";
             basePackage.SftpserverIP = "188.10.18.188";
             basePackage.SftpUserName = "itSftpUser";
-            basePackage.SftpPassword = "Huawei@123";
+            basePackage.SftpPassword = "123";
             WebMutilESightsParam<BasePackage> postESightParam = new WebMutilESightsParam<BasePackage>();
             postESightParam.ESights = new List<string>() { "127.0.0.1" };
             postESightParam.Data = basePackage;

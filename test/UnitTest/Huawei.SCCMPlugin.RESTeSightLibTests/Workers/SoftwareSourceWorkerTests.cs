@@ -51,7 +51,7 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers.Tests
             softwareSource.SourceName = "7601.17514.101119 - 1850_x64fre_server_eval_en - us - GRMSXEVAL_EN_DVD.iso";
             softwareSource.SftpserverIP = "188.10.18.188";
             softwareSource.SftpUserName = "itSftpUser";
-            softwareSource.SftpPassword = "Huawei@123";
+            softwareSource.SftpPassword = "123";
 
             StringBuilder sb = new StringBuilder(ConstMgr.HWESightHost.URL_UPLOADE_SOFTWARESOURCE);
             JObject jResult = JsonUtil.DeserializeObject<JObject>("{\"code\" : -4011, \"data\":{ \"taskName\":\"API@Task_1456209500919\"},\"description\" : \"任务正在运行.\"}");
@@ -114,7 +114,7 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers.Tests
             softwareSource.SourceName = "7601.17514.101119 - 1850_x64fre_server_eval_en - us - GRMSXEVAL_EN_DVD.iso";
             softwareSource.SftpserverIP = "188.10.18.188";
             softwareSource.SftpUserName = "itSftpUser";
-            softwareSource.SftpPassword = "Huawei@123";
+            softwareSource.SftpPassword = "123";
             string taskName = _esSession.SoftSourceWorker.UploadSoftwareSource(softwareSource);
             Console.WriteLine(taskName);
             Assert.IsTrue(!string.IsNullOrEmpty(taskName));
@@ -134,7 +134,7 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers.Tests
             softwareSource.SourceName = "7601.17514.101119 - 1850_x64fre_server_eval_en - us - GRMSXEVAL_EN_DVD.iso";
             softwareSource.SftpserverIP = "188.10.18.188";
             softwareSource.SftpUserName = "itSftpUser";
-            softwareSource.SftpPassword = "Huawei@123";
+            softwareSource.SftpPassword = "123";
             string taskName = _esSession.SoftSourceWorker.UploadSoftwareSource(softwareSource);
             Console.WriteLine(taskName);
             Assert.IsTrue(!string.IsNullOrEmpty(taskName));
@@ -152,7 +152,7 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers.Tests
             softwareSource.SourceName = "7601.17514.101119 - 1850_x64fre_server_eval_en - us - GRMSXEVAL_EN_DVD.iso";
             softwareSource.SftpserverIP = "188.10.18.188";
             softwareSource.SftpUserName = "itSftpUser";
-            softwareSource.SftpPassword = "Huawei@123";
+            softwareSource.SftpPassword = "123";
             QueryObjectResult < JObject > sourceResult = _esSession.SoftSourceWorker.UploadSoftwareSourceWithResult(softwareSource);
             Assert.IsNotNull(sourceResult);
         }
@@ -169,7 +169,7 @@ namespace Huawei.SCCMPlugin.RESTeSightLib.Workers.Tests
             softwareSource.SourceName = "7601.17514.101119 - 1850_x64fre_server_eval_en - us - GRMSXEVAL_EN_DVD.iso";
             softwareSource.SftpserverIP = "188.10.18.188";
             softwareSource.SftpUserName = "itSftpUser";
-            softwareSource.SftpPassword = "Huawei@123";
+            softwareSource.SftpPassword = "123";
             string taskName = _esSession.SoftSourceWorker.UploadSoftwareSource(softwareSource);
             WebMutilESightsParam<SoftwareSource> postESightParam = new WebMutilESightsParam<SoftwareSource>();
             postESightParam.ESights = new List<string>() { "127.0.0.1" };
